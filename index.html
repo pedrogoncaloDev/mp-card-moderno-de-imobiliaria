@@ -9,7 +9,7 @@
     </head>
     <body>
         <button class="button-tema" onclick="AlterarTema()">
-            <span class="mdi mdi-vector-square"></span>
+            <span id="span-btn-tema" class="mdi mdi-moon-waning-crescent"></span>
         </button>
 
         <main>
@@ -54,6 +54,15 @@
                 const html = document.documentElement;
                 const tema = html.getAttribute("data-theme") === "light" ? "dark" : "light";
                 html.setAttribute("data-theme", tema);
+
+                const icon_btn_tema = document.querySelector("#span-btn-tema");
+                icon_btn_tema.removeAttribute("class");
+                
+                if (tema === "dark"){
+                    icon_btn_tema.setAttribute("class", "mdi mdi-white-balance-sunny");
+                }else{
+                    icon_btn_tema.setAttribute("class", "mdi mdi-moon-waning-crescent");
+                }
             }
         </script>
     </body>
