@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,10 @@
         <title>Card Imobiliária</title>
     </head>
     <body>
+        <button class="button-tema" onclick="AlterarTema()">
+            <span class="mdi mdi-vector-square"></span>
+        </button>
+
         <main>
             <section class="img-card">
                 <figure>
@@ -44,5 +48,13 @@
                 </div>
             </section>
         </main>
+
+        <script>
+            function AlterarTema() {
+                const html = document.documentElement;
+                const tema = html.getAttribute("data-theme") === "light" ? "dark" : "light";
+                html.setAttribute("data-theme", tema);
+            }
+        </script>
     </body>
 </html>
