@@ -8,22 +8,22 @@
         <title>Card Imobiliária</title>
     </head>
     <body>
-        <button class="button-tema" onclick="AlterarTema()">
-            <span id="span-btn-tema" class="mdi mdi-moon-waning-crescent"></span>
+        <button class="theme-button" onclick="toggleTheme()">
+            <span id="theme-button-icon" class="mdi mdi-moon-waning-crescent"></span>
         </button>
 
         <main>
-            <section class="img-card">
+            <section class="image-card">
                 <figure>
-                    <img src="assets/apartamento.jpg" alt="Apartamento">
+                    <img src="assets/apartment.jpg" alt="Apartamento">
                     <figcaption>Apartamento moderno</figcaption>
                 </figure>
             </section>
             
-            <section class="infos-apartamento">
-                <span class="p-avaliacao"><i class="mdi mdi-star"></i> 4,8 (42 avaliações)</span>
+            <section class="apartment-info">
+                <span class="rating"><i class="mdi mdi-star"></i> 4,8 (42 avaliações)</span>
 
-                <p class="p-descricao">Um belo apartamento moderno no centro da cidade</p>
+                <p class="description">Um belo apartamento moderno no centro da cidade</p>
 
                 <div class="grid-container">
                     <span class="grid-item"><i class="mdi mdi-vector-square"></i> 85m²</span>
@@ -33,35 +33,35 @@
                 </div>
 
                 <aside>
-                    <span class="infos-adicionais">Varanda</span>
-                    <span class="infos-adicionais">Mobiliado</span>
-                    <span class="infos-adicionais">Pet-friendly</span>
+                    <span class="additional-info">Varanda</span>
+                    <span class="additional-info">Mobiliado</span>
+                    <span class="additional-info">Pet-friendly</span>
                 </aside>
             </section>
 
-            <section class="valor-buttons">
-                <h1 class="preco">R$ 2500,00</h1>
+            <section class="price-buttons">
+                <h1 class="price">R$ 2500,00</h1>
 
-                <div class="div-buttons">
-                    <button class="btn-agendar-visita">Agendar visita</button>
-                    <button class="btn-contatar-corretor">Contatar corretor</button>
+                <div class="button-container">
+                    <button class="schedule-visit-button">Agendar visita</button>
+                    <button class="contact-agent-button">Contatar corretor</button>
                 </div>
             </section>
         </main>
 
         <script>
-            function AlterarTema() {
+            function toggleTheme() {
                 const html = document.documentElement;
-                const tema = html.getAttribute("data-theme") === "light" ? "dark" : "light";
-                html.setAttribute("data-theme", tema);
+                const theme = html.getAttribute("data-theme") === "light" ? "dark" : "light";
+                html.setAttribute("data-theme", theme);
 
-                const icon_btn_tema = document.querySelector("#span-btn-tema");
-                icon_btn_tema.removeAttribute("class");
+                const themeButtonIcon = document.querySelector("#theme-button-icon");
+                themeButtonIcon.removeAttribute("class");
                 
-                if (tema === "dark"){
-                    icon_btn_tema.setAttribute("class", "mdi mdi-white-balance-sunny");
+                if (theme === "dark"){
+                    themeButtonIcon.setAttribute("class", "mdi mdi-white-balance-sunny");
                 }else{
-                    icon_btn_tema.setAttribute("class", "mdi mdi-moon-waning-crescent");
+                    themeButtonIcon.setAttribute("class", "mdi mdi-moon-waning-crescent");
                 }
             }
         </script>

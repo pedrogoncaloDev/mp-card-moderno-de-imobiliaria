@@ -64,7 +64,7 @@ button {
     transition: background 0.3s;
 }
 
-.button-tema{
+.theme-button {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -74,22 +74,22 @@ button {
     border-radius: 50px;
 }
 
-.button-tema span{
-    color: var(--button-text)
+.theme-button span {
+    color: var(--button-text);
 }
 
-/* Primeira section */
-.img-card {
+/* First section */
+.image-card {
     width: 100%;
     height: 33%;
 }
 
-.img-card figure {
+.image-card figure {
     width: 100%;
     height: 100%;
 }
 
-.img-card img {
+.image-card img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -97,7 +97,7 @@ button {
     border-top: 7px solid var(--border-color);
 }
 
-.img-card figcaption {
+.image-card figcaption {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 25px;
     width: 100%;
@@ -106,24 +106,24 @@ button {
     color: var(--text-titulo);
 }
 
-/* Segunda section */
-.infos-apartamento {
+/* Second section */
+.apartment-info {
     padding: 10px;
 }
 
-.infos-apartamento .p-avaliacao {
+.apartment-info .rating {
     margin-top: 10px;
 }
 
-.p-avaliacao i {
+.rating i {
     color: var(--rating-color);
 }
 
-.infos-apartamento .p-descricao {
+.apartment-info .description {
     margin-top: 10px;
 }
 
-.infos-apartamento p, .infos-apartamento .grid-container span {
+.apartment-info p, .apartment-info .grid-container span {
     color: var(--text-color);
     font-size: 18px;
 }
@@ -147,7 +147,7 @@ button {
     color: var(--highlight-color);
 }
 
-.infos-adicionais {
+.additional-info {
     font-size: 18px;
     color: var(--text-color);
     background: var(--info-bg);
@@ -155,33 +155,33 @@ button {
     padding: 5px 10px;
 }
 
-.infos-apartamento aside {
+.apartment-info aside {
     margin-top: 20px;
 }
 
-.infos-apartamento aside span {
+.apartment-info aside span {
     margin-right: 10px;
 }
 
-/* Terceira section */
-.valor-buttons {
+/* Third section */
+.price-buttons {
     margin-top: 10px;
     padding: 10px;
 }
 
-.valor-buttons .preco {
+.price-buttons .price {
     font-size: 35px;
     color: var(--highlight-color);
 }
 
-.valor-buttons .div-buttons {
+.price-buttons .button-container {
     width: 100%;
     display: flex;
     justify-content: space-between;
     margin: 10px 0 20px 0;
 }
 
-.valor-buttons .div-buttons .btn-agendar-visita {
+.price-buttons .button-container .schedule-visit-button {
     padding: 10px;
     width: 45%;
     background: var(--button-bg);
@@ -192,7 +192,7 @@ button {
     font-size: 14px;
 }
 
-.valor-buttons .div-buttons .btn-contatar-corretor {
+.price-buttons .button-container .contact-agent-button {
     padding: 10px;
     width: 45%;
     background: var(--card-bg);
